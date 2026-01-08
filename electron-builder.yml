@@ -12,17 +12,13 @@ asarUnpack:
   - resources/**
 win:
   executableName: LOL好友清理工具
-  icon: build/icon.ico
+  icon: build/icon.png
   target:
-    - target: nsis
+    - target: portable
       arch:
         - x64
-nsis:
-  oneClick: false
-  perMachine: false
-  allowToChangeInstallationDirectory: true
-  deleteAppDataOnUninstall: false
-  shortcutName: LOL好友清理工具
+portable:
+  artifactName: ${productName}-${version}-便携版.exe
 mac:
   entitlementsInherit: build/entitlements.mac.plist
   extendInfo:
